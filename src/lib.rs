@@ -41,7 +41,7 @@ impl Default for Entity {
 }
 
 impl Entity {
-    fn new(pos: Vector2F, sprite: TextureHandle) -> Self {
+    pub fn new(pos: Vector2F, sprite: TextureHandle) -> Self {
         Entity {
             position: pos,
             size: Vector2F { x: 1.0, y: 1.0 },
