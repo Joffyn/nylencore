@@ -22,11 +22,11 @@ pub struct Vector3F {
 }
 #[derive(Debug, Clone, Copy)]
 pub struct Entity {
-    position: Vector2F,
-    size: Vector2F,
-    layer: u32,
-    texture: TextureHandle,
-    shader: ShaderHandle,
+    pub position: Vector2F,
+    pub size: Vector2F,
+    pub layer: u32,
+    pub texture: TextureHandle,
+    pub shader: ShaderHandle,
 }
 impl Default for Entity {
     fn default() -> Self {
@@ -49,12 +49,6 @@ impl Entity {
             texture: sprite,
             shader: Default::default(),
         }
-    }
-    fn get_pos(&self) -> &Vector2F {
-        &self.position
-    }
-    fn get_size(&self) -> &Vector2F {
-        &self.size
     }
 }
 
